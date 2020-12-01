@@ -1,0 +1,168 @@
+<html>
+<head>
+<style>
+*{font-family:serif;font-weight:400;text-transform: capitalize; font-style: italic; text-align: center; }
+body{background-image: url(covid%2019.jpeg); background-repeat:round}
+body, ul, li{margin:0;padding:0;color: red}
+p, li, h1, h2, h3, h4{color:black; text-align: center;color: red}
+.python{border-radius: 50%;}
+.title{font-family:serif;font-weight:400;text-transform: capitalize; font-style: italic; text-align: center}
+body{background-color:dodgerblue;}
+.footer{width:96%;max-width: 1200px;margin:0 auto;padding:0 2%;text-transform: capitalize; font-style: italic; background-color: red}
+.wrapper{width:96%;max-width: 1200px;margin:0 auto;padding:0 2%;text-transform: capitalize; font-style: italic}
+header{background-color:dodgerblue;padding:10px 0;}
+.logo{margin:0;background: url(LOGO.jpg);background-size:70px 70px;float:left;width:70px;height:70px; text-transform: capitalize; font-style: italic}
+header:after{content: "";display: block;clear: both;}
+#namesec{text-transform: capitalize; font-style: italic; background-color: red}
+header nav{float:right;}
+header nav li{list-style-type:none;float:left;margin-left:20px;margin-top:20px;}
+header nav li a{text-decoration:none;color:red;font-size:15px;text-transform: uppercase;}
+#main-banner {width: 100%;max-height: 500px;overflow: hidden;}
+#main-banner img {width: 100%;text-transform: capitalize; font-style: italic}
+#slider {overflow: hidden;text-transform: capitalize; font-style: italic}
+#slides {position: relative;width: 500%;margin: 0;left: 0;text-align: left;font-size: 0;animation: 18s slidy infinite;text-transform: capitalize; font-style: italic}
+#slides img {width: 20%;float: left;text-transform: capitalize; font-style: italic}
+#usp {margin-top: 60px;text-transform: capitalize; font-style: italic}
+#usp li{float: left;width: 23%;padding: 1%;text-align: center;list-style-type: none;text-transform: capitalize; font-style: italic}
+#usp li img {height: 80px;padding: 20px;background-color: coral;border-radius: 50%;text-transform: capitalize; font-style: italic}
+#usp li h2 {font-size: 16px;font-weight: 400;text-transform: capitalize; font-style: italic}
+#usp:after {content: "";display: block;clear: both;text-transform: capitalize; font-style: italic}
+#products {padding-top: 30px;margin-top: 30px;border-top: 2px solid: red; text-transform: capitalize; font-style: italic}
+header nav li{list-style-type: none; float: left; margin-left: 10px; margin-top: 20px;}
+header nav li a{text-decoration: underline; color: darkblue}
+header nav li a:hover{text-decoration: none; color: red}
+header nav li a:checked{text-decoration: underline; color: black}
+header nav li a:active{color: black}
+#products li {float: left;width: 32%;list-style-type: none;text-align: center;text-transform: capitalize; font-style: italic}
+#products li img {width: 100%;text-transform: capitalize; font-style: italic}
+#products li:nth-child(even) {margin: 0 1%;text-transform: capitalize; font-style: italic}
+#products:after {content: "";display: block;clear: both;text-transform: capitalize; font-style: italic}
+#our-products {text-align: center;text-transform: capitalize; font-style: italic}
+footer{width:100%;background-color:darkred;padding: 30px 0;margin-top:60px;}
+footer ul{float:left;width:48%;margin:1%;}
+footer ul h3{font-size:30px;color: azure;}
+footer ul li{list-style-type: none;font-size:15px;color: azure;}
+footer:after{display:block;content:"";clear:both;}
+.CLASS{text-align: center}
+footer li a{text-decoration: underline; color: darkblue}
+footer li a:hover{text-decoration: none; color: red}
+footer li a:checked{text-decoration: underline; color: black}
+#button{}
+/* Animation */
+@keyframes slidy {
+0% { left: 0%; }
+28% { left: 0%; }
+33% { left: -100%; }
+61% { left: -100%; }
+66% { left: -200%; }
+94% { left: -200%; }
+100% { left: 0%; }
+}
+</style>
+</head>
+<body>
+<h1>COVID-19 TESTER</h1>
+<hr>
+<p>AS WE KNOW THAT COVID-19, PANDEMIC HAS FALLEN SO THIS WEBSITE WILL HELP YOU TO CHECK IF YOU ARE HAVING ANY SYMPTOMS OR NOT. TO GET STARTED, PRESS ON THE BUTTON BELLOW</p><hr>
+<div id="button">
+<button onclick="myfunction()">Click here to do a covid-19 test</button>
+</div>
+<p id="demo"></p>  
+<script>
+function myfunction(){
+var fever, cough,bodypain,msg;
+    var fever = prompt("are you feeling fever","yes");
+        var cough = prompt("Do you have a cough or a runny nose?","yes");
+        var bodypain = prompt("Do you have body pain?","yes");
+ if (fever=="yes"){
+            if(cough=="yes"){
+                if(bodypain=="yes"){
+                    msg="You need to contact a doctor(101) or the cops(100) ASAP";
+                    document.getElementById("demo").innerHTML=msg;
+                }
+                else if(bodypain=="no"){
+                    msg="If you feverish or get a body pain please connect with a doctor, in the mean time please stay home";
+                    document.getElementById("demo").innerHTML=msg;
+                }
+                else{
+                    msg="I dont know what to do. reload the page and answer in yes and no only in small letters";
+                    document.getElementById("demo").innerHTML=msg;
+                    
+                }
+            }
+else if(cough=="no"){
+                
+                if(bodypain=="yes"){
+                    msg="Maybe the body pain is just due to fever, never the less #stay_home_stay_safe";
+                 document.getElementById("demo").innerHTML=msg;
+
+                }
+                
+                else if(bodypain=="no"){
+                    msg="dont worry it's just cough";
+                    document.getElementById("demo").innerHTML=msg;
+
+                }
+                
+                else{
+                    msg="I dont know what to do. reload the page and answer in yes and no only in small letters";
+                    document.getElementById("demo").innerHTML=msg;
+                    
+                }
+                
+            }
+            
+        }
+
+else if(fever=="no"){
+            if(cough=="yes"){
+                if(bodypain=="yes"){
+                    msg="Rest well, if there is no improvement in health contact a doctor";
+                    document.getElementById("demo").innerHTML=msg;
+                }
+                else if(bodypain=="no"){
+                    msg="If you feel pukish or get a body pain or fever please connect with a doctor, in the mean time #stay_home_stay_safe";
+                    document.getElementById("demo").innerHTML=msg;
+                }
+                else{
+                    msg="I dont know what to do. reload the page and answer in yes and no only in small letters";
+                    document.getElementById("demo").innerHTML=msg;
+                    
+                }
+            }
+            
+            else if(cough=="no"){
+                
+                if(bodypain=="yes"){
+                    msg="Maybe the body pain is due to tierness, nevertheless #stay_home_stay_safe";
+                 document.getElementById("demo").innerHTML=msg;
+
+                }
+                
+                else if(bodypain=="no"){
+                    msg="You are perfectly fine";
+                    document.getElementById("demo").innerHTML=msg;
+
+                }
+                
+                else{
+                    msg="I dont know what to do. reload the page and answer in yes and no only in small letters";
+                    document.getElementById("demo").innerHTML=msg;
+                    
+                }
+                
+            }
+            
+        }
+
+ else {
+             msg="I dont know what to do. reload the page and answer in yes and no only in small letters";
+            document.getElementById("demo").innerHTML=msg;
+        }
+    }
+    
+    </script>
+    
+    </body>
+
+</html>
